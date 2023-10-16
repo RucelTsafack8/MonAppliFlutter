@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
-import 'package:flutter/material.dart';
 import 'package:app_flutter/screens/Home.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
+/// le noeuds de l' application
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -15,8 +15,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Digital Brain\'s'),
+          titleTextStyle: 
+            const TextStyle(
+            fontSize: 45.0,
+        ),
+      ),
+      body: Home(),
+      
+    ),
     );
   }
 }
-
