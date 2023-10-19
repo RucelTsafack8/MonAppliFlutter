@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "256481551893",
+    "project_id": "digitalbrain-237",
+    "storage_bucket": "digitalbrain-237.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256481551893:android:d09d003b332c4ad58e501c",
+        "android_client_info": {
+          "package_name": "com.example.app_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkKDdnmPZJGvkNaifyLslAsgSeDYbYam4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

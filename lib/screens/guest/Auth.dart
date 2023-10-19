@@ -36,9 +36,11 @@ class _HomeState extends State<AuthPage> {
           title: const Text("Premier pas"),
           titleTextStyle: const TextStyle(
             fontSize: 30.0,
+            color: Colors.white,
           ),
         ),
-        body: Center(
+        body: Container(
+          color: Colors.lightBlue[50],
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(20),
             child: Column(
