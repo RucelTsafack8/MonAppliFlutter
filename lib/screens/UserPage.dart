@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+import 'package:app_flutter/controllers/databaseController.dart';
+>>>>>>> 53cec4492d97466ed53ae2420c6bd0d5f72071d5
 import 'package:app_flutter/screens/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

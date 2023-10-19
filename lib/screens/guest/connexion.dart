@@ -131,6 +131,7 @@ class _HomeState extends State<LoginPage> {
 
                         // ignore: non_constant_identifier_names
                         final MotDePasse = MotDePassecontroller.text;
+<<<<<<< HEAD
 
                        
                           Navigator.push(
@@ -141,6 +142,14 @@ class _HomeState extends State<LoginPage> {
                           );
                        
                         // return 'echec de conexion de l\'utilisateur';
+=======
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const UserPage(),
+                          ),
+                        );
+>>>>>>> 53cec4492d97466ed53ae2420c6bd0d5f72071d5
 
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Text(
@@ -185,7 +194,12 @@ class _HomeState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           PageRouteBuilder(
+<<<<<<< HEAD
                               pageBuilder: (_, __, ___) => const ListUser()),
+=======
+                              pageBuilder: (_, __, ___) =>
+                                  const ListUser()),
+>>>>>>> 53cec4492d97466ed53ae2420c6bd0d5f72071d5
                         );
                       },
                       child: Text(

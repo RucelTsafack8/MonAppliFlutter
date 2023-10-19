@@ -1,3 +1,4 @@
+import 'package:app_flutter/controllers/databaseController.dart';
 import 'package:app_flutter/screens/guest/connexion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -205,28 +206,31 @@ class _HomeState extends State<RegisterPage> {
                           // ignore: non_constant_identifier_names
                           final NomPrenom = Nomcontroller.text;
                           // ignore: non_constant_identifier_names
-                          final Travail = TravailUser;
-                          // ignore: non_constant_identifier_names
-                          final Email = Emailcontroller.text;
+                          final Travail = Travailcontroller.text;
                           // ignore: non_constant_identifier_names
                           final MotDePasse = MotDePassecontroller.text;
-                          ///insertion des donnees dans la base de donnee
-                          
-                          ///fin d'insertion
-
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LoginPage(),
-                              // arguments: {'Email':Email},
-                            ),
-                          );
+                           Navigator.push(
+                                context,
+                              
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                      const LoginPage(),
+                                      // arguments: {'Email':Email},
+                                    ),
+                                    
+                              );
 
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                               content: Text(
-                            "le nom: $NomPrenom et le travail: $Travail .....et le mot de passe est $MotDePasse et l'email est $Email",
-                          )));
+                                  "le nom: $NomPrenom et le travail: $Travail .....et le mot de passe est $MotDePasse")));
                           FocusScope.of(context).requestFocus(FocusNode());
+
+                          ///insertion d'un utilisateur dans la base de donnees
+                          //ignore: non_constant_identifier_names
+                          DatabaseController().add(Email, MotDePasse, NomPrenom, Travail);
+                         
+
+
                         }
                       },
                       child: const Text("Envoyer",
