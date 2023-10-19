@@ -1,3 +1,5 @@
+
+import 'package:app_flutter/controllers/databaseController.dart';
 import 'package:app_flutter/screens/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -15,15 +17,19 @@ class UserPage extends StatefulWidget {
 }
 
 class _HomeState extends State<UserPage> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+
         appBar: AppBar(
           title: const Text("Digital Brain's"),
           titleTextStyle: const TextStyle(
             fontSize: 30.0,
-            fontFamily: 'Artifact'
+            fontFamily: 'Argency'
           ),
                 actions: <Widget>[
           IconButton(
@@ -94,6 +100,7 @@ class _HomeState extends State<UserPage> {
             const Padding(
               padding: EdgeInsets.all(30),
             ),
+            
             // ElevatedButton(
             //   style: 
             //      const ButtonStyle(

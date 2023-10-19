@@ -1,3 +1,4 @@
+import 'package:app_flutter/screens/ListeUser.dart';
 import 'package:app_flutter/screens/UserPage.dart';
 import 'package:app_flutter/screens/guest/Inscription.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +77,7 @@ class _HomeState extends State<LoginPage> {
                   height: 25.2,
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.name,
+                  keyboardType: TextInputType.emailAddress,
                   decoration: const InputDecoration(
                       labelText: "Email",
                       border: OutlineInputBorder(),
@@ -132,13 +133,13 @@ class _HomeState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => UserPage(),
+                            builder: (context) => const UserPage(),
                           ),
                         );
 
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                             content: Text(
-                                "le nom: $Email et le password: $MotDePasse .....")));
+                                "l'email est : $Email et le password est : $MotDePasse .....")));
                         FocusScope.of(context).requestFocus(FocusNode());
                       }
                     },
@@ -165,7 +166,28 @@ class _HomeState extends State<LoginPage> {
                       child: Text(
                         "S'enregistrer",
                         style: TextStyle(
-                            color: Colors.amberAccent.withOpacity(0.6),
+                            color: Colors.blueAccent.withOpacity(0.6),
+                            decoration: TextDecoration.underline),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Text("vous avez pas encore de compte ?"),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) =>
+                                  const ListUser()),
+                        );
+                      },
+                      child: Text(
+                        "liste utilisateur",
+                        style: TextStyle(
+                            color: Colors.blueAccent.withOpacity(0.6),
                             decoration: TextDecoration.underline),
                       ),
                     ),
